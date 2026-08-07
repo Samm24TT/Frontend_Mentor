@@ -4,10 +4,10 @@ My solutions to [Frontend Mentor](https://www.frontendmentor.io/) challenges. Ea
 
 ## Projects
 
-| Challenge                 | Live Demo | Code                                     |
-| ------------------------- | --------- | ---------------------------------------- |
-| Meet Landing Page         | [Live](#) | [Code](./meet-landing-page)              |
-| Testimonials Grid Section | [Live](#) | [Code](./testimonials-grid-section-main) |
+| Challenge                 | Live Demo                                               | Code                                     |
+| ------------------------- | ------------------------------------------------------- | ---------------------------------------- |
+| Meet Landing Page         | [Live](https://landing-page-exercise-pied.vercel.app/)  | [Code](./meet-landing-page)              |
+| Testimonials Grid Section | [Live](https://testimonials-grid-beta-nine.vercel.app/) | [Code](./testimonials-grid-section-main) |
 
 ## Tech Stack
 
