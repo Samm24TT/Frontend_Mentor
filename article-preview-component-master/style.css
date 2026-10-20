@@ -148,20 +148,92 @@ article > img {
   color: var(--grayish-blue);
 }
 
-/* show on hover (and keyboard focus) */
-.share-wrapper:hover .share-popup,
-.share-wrapper:focus-within .share-popup {
-  opacity: 1;
-  visibility: visible;
+@media (min-width: 769px) {
+  /* show on hover (and keyboard focus) */
+  .share-wrapper:hover .share-popup,
+  .share-wrapper:focus-within .share-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* button turns dark, icon turns white */
+  .share-wrapper:hover .share-button,
+  .share-wrapper:focus-within .share-button {
+    background-color: var(--desaturated-dark-blue);
+  }
+
+  .share-wrapper:hover .share-button img,
+  .share-wrapper:focus-within .share-button img {
+    filter: brightness(0) invert(1);
+  }
 }
 
-/* button turns dark, icon turns white */
-.share-wrapper:hover .share-button,
-.share-wrapper:focus-within .share-button {
-  background-color: var(--desaturated-dark-blue);
-}
+@media (max-width: 768px) {
+  /* stacked card */
+  article {
+    flex-direction: column;
+    width: calc(100% - 3rem);
+    max-width: 327px;
+  }
 
-.share-wrapper:hover .share-button img,
-.share-wrapper:focus-within .share-button img {
-  filter: brightness(0) invert(1);
+  article > img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .testimonial-content {
+    padding: 1.5rem 2rem 0;
+  }
+
+  /* footer becomes a full-width row, edge to edge */
+  .testimonial-author {
+    position: relative;
+    height: 72px;
+    margin: 0 -2rem;
+    padding: 0 2rem;
+  }
+
+  /* popup is positioned against the footer, not the button */
+  .share-wrapper {
+    position: static;
+  }
+
+  .share-popup {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    margin: 0;
+    padding: 0 2rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: none;
+  }
+
+  /* no arrow or hover bridge on mobile */
+  .share-popup::before,
+  .share-popup::after {
+    display: none;
+  }
+
+  /* button always sits above the popup */
+  .share-button {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* active state (set by the JS click toggle) */
+  .testimonial-author.share-open .share-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .testimonial-author.share-open .share-button {
+    background-color: var(--desaturated-dark-blue);
+  }
+
+  .testimonial-author.share-open .share-button img {
+    filter: brightness(0) invert(1);
+  }
 }
