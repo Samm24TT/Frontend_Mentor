@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Article preview component</title>
 
@@ -27,7 +28,7 @@
   </head>
   <body>
     <article>
-      <img src="/images/drawers.jpg" alt="" />
+      <img src="/images/drawers.jpg" alt="a pic of drawer" />
       <div class="testimonial-content">
         <h2 class="testimonial-title">
           Shift the overall look and feel by adding these wonderful touches to
@@ -42,11 +43,27 @@
           <img src="/images/avatar-michelle.jpg" alt="author avatar" />
           <div class="author-info">
             <div class="author-name">Michelle Appleton</div>
-            <div class="author-date">28 Jun 2020 Share</div>
+            <div class="author-date">28 Jun 2020</div>
           </div>
-          <button class="share-button" aria-label="share this">
-            <img src="/images/icon-share.svg" alt="" />
-          </button>
+
+          <div class="share-wrapper">
+            <div class="share-popup">
+              <span class="share-label">SHARE</span>
+              <a href="#" aria-label="Share on Facebook">
+                <img src="/images/icon-facebook.svg" alt="" />
+              </a>
+              <a href="#" aria-label="Share on Twitter">
+                <img src="/images/icon-twitter.svg" alt="" />
+              </a>
+              <a href="#" aria-label="Share on Pinterest">
+                <img src="/images/icon-pinterest.svg" alt="" />
+              </a>
+            </div>
+
+            <button class="share-button" aria-label="share this">
+              <img src="/images/icon-share.svg" alt="" />
+            </button>
+          </div>
         </footer>
       </div>
     </article>
